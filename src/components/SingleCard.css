@@ -1,0 +1,48 @@
+.card {
+  position: relative;
+  height: 250px;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
+/* front of card */
+
+.card .front {
+  transform: rotateY(90deg);
+  position: absolute;
+  transition: all ease-in 0.2s;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+/* back of card */
+
+.card .back {
+  --pink: rgb(255, 186, 238);
+  --white: #fff;
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+  height: 250px;
+
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background: repeating-linear-gradient( 45deg, var(--pink), var(--pink), 5px,var(--white) 5px, var(--white) 25px );
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
